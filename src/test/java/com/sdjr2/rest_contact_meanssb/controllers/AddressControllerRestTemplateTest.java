@@ -32,7 +32,7 @@ class AddressControllerRestTemplateTest {
 	ObjectMapper objMapper;
 
 	@BeforeEach
-	public void setUp () {
+	void setUp () {
 		this.addressDTOs.add( DataMethods.getAddressDTO() );
 		this.objMapper = new ObjectMapper();
 	}
@@ -46,14 +46,14 @@ class AddressControllerRestTemplateTest {
 
 		List<AddressDTO> dtosDB = Arrays.asList( resp.getBody() );
 		assertNotNull( dtosDB );
-		assertEquals( this.addressDTOs.get( 0 ).getId(), dtosDB.get( 1 ).getId() );
-		assertEquals( this.addressDTOs.get( 0 ).getStreet(), dtosDB.get( 1 ).getStreet() );
+		assertEquals( this.addressDTOs.getFirst().getId(), dtosDB.get( 1 ).getId() );
+		assertEquals( this.addressDTOs.getFirst().getStreet(), dtosDB.get( 1 ).getStreet() );
 	}
 
 	@Order(2)
 	@Test
 	void getAddressByIdTest () {
-		AddressDTO dto = this.addressDTOs.get( 0 );
+		AddressDTO dto = this.addressDTOs.getFirst();
 
 		ResponseEntity<AddressDTO> resp = this.client.getForEntity( "/addresses/2", AddressDTO.class );
 		assertEquals( HttpStatus.OK, resp.getStatusCode() );
@@ -69,7 +69,7 @@ class AddressControllerRestTemplateTest {
 	@Test
 	void createAddressTest () throws
 														JsonProcessingException {
-		AddressDTO dto = this.addressDTOs.get( 0 );
+		AddressDTO dto = this.addressDTOs.getFirst();
 		dto.setId( 0L );
 		dto.setStreet( "Murillo" );
 
@@ -96,11 +96,11 @@ class AddressControllerRestTemplateTest {
 
 		String street = "Rosario";
 		// Since it is passed by reference, a clone is made by constructor so that the list object is not changed
-		AddressDTO dto = AddressDTO.valueOf( this.addressDTOs.get( 0 ) );
+		AddressDTO dto = AddressDTO.valueOf( this.addressDTOs.getFirst() );
 		dto.setStreet( street );
 		String requestBody = this.objMapper.writeValueAsString( dto );
 		// The list object is assigned again since it has the initial state
-		dto = AddressDTO.valueOf( this.addressDTOs.get( 0 ) );
+		dto = AddressDTO.valueOf( this.addressDTOs.getFirst() );
 
 		HttpEntity<String> httpEntityReq = new HttpEntity<>( requestBody, headers );
 

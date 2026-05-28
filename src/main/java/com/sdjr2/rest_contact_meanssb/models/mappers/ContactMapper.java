@@ -2,8 +2,8 @@ package com.sdjr2.rest_contact_meanssb.models.mappers;
 
 import com.sdjr2.rest_contact_meanssb.models.dto.ContactDTO;
 import com.sdjr2.rest_contact_meanssb.models.entities.ContactEntity;
-import com.sdjr2.sb.library_commons.models.entities.AuditableEntity;
-import com.sdjr2.sb.library_commons.models.mappers.BaseMapper;
+import com.ssdjr2.own.sbc.tool.library_commons.models.entities.AuditableEntity;
+import com.ssdjr2.own.sbc.tool.library_commons.models.mappers.BaseMapper;
 import org.mapstruct.*;
 
 /**

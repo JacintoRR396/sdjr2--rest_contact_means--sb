@@ -9,9 +9,9 @@ import com.sdjr2.rest_contact_meanssb.models.mappers.AddressMapper;
 import com.sdjr2.rest_contact_meanssb.repositories.AddressJpaRepository;
 import com.sdjr2.rest_contact_meanssb.repositories.filters.AddressSpecifications;
 import com.sdjr2.rest_contact_meanssb.services.AddressService;
-import com.sdjr2.sb.library_commons.exceptions.CustomException;
-import com.sdjr2.sb.library_commons.models.dto.search.FilterDTO;
-import com.sdjr2.sb.library_commons.models.dto.search.SearchBodyDTO;
+import com.ssdjr2.own.sbc.tool.library_commons.exceptions.CustomException;
+import com.ssdjr2.own.sbc.tool.library_commons.models.dto.search.FilterDTO;
+import com.ssdjr2.own.sbc.tool.library_commons.models.dto.search.SearchBodyDTO;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -19,12 +19,12 @@ import org.mockito.Spy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -40,13 +40,13 @@ import static org.mockito.Mockito.*;
 @SpringBootTest
 class AddressServiceImplTest {
 
-	@MockBean
+	@MockitoBean
 	AddressMapper addressMapper;
 
-	@MockBean
+	@MockitoBean
 	AddressSpecifications addressSpecs;
 
-	@MockBean
+	@MockitoBean
 	AddressJpaRepository addressRepo;
 
 	@Autowired
@@ -60,7 +60,7 @@ class AddressServiceImplTest {
 	List<AddressDTO> addressDTOs = new ArrayList<>();
 
 	@BeforeEach
-	public void setUp () {
+	void setUp () {
 		this.addressEntities.add( DataMethods.getAddressEntity() );
 		this.addressDTOs.add( DataMethods.getAddressDTO() );
 	}

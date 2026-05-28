@@ -2,8 +2,8 @@ package com.sdjr2.rest_contact_meanssb.models.mappers.auth;
 
 import com.sdjr2.rest_contact_meanssb.models.dto.auth.RoleDTO;
 import com.sdjr2.rest_contact_meanssb.models.entities.auth.RoleEntity;
-import com.sdjr2.sb.library_commons.models.entities.AuditableEntity;
-import com.sdjr2.sb.library_commons.models.mappers.BaseMapper;
+import com.ssdjr2.own.sbc.tool.library_commons.models.entities.AuditableEntity;
+import com.ssdjr2.own.sbc.tool.library_commons.models.mappers.BaseMapper;
 import org.mapstruct.*;
 
 /**

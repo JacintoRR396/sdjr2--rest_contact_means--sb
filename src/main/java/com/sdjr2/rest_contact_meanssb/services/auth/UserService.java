@@ -4,7 +4,7 @@ import com.sdjr2.rest_contact_meanssb.models.dto.auth.UserDTO;
 import com.sdjr2.rest_contact_meanssb.models.entities.auth.UserEntity;
 import com.sdjr2.rest_contact_meanssb.models.mappers.auth.UserMapper;
 import com.sdjr2.rest_contact_meanssb.repositories.auth.UserJpaRepository;
-import com.sdjr2.sb.library_commons.services.BaseService;
+import com.ssdjr2.own.sbc.tool.library_commons.services.BaseService;
 
 /**
  * {@link UserService} interface.

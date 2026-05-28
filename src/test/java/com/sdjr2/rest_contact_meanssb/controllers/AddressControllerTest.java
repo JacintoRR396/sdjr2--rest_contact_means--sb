@@ -6,14 +6,14 @@ import com.sdjr2.rest_contact_meanssb.models.dto.AddressDTO;
 import com.sdjr2.rest_contact_meanssb.models.mappers.RespEntityErrorMapper;
 import com.sdjr2.rest_contact_meanssb.services.impl.AddressServiceImpl;
 import com.sdjr2.rest_contact_meanssb.utils.UDateTimeService;
-import com.sdjr2.sb.library_commons.models.dto.BaseDTO;
+import com.ssdjr2.own.sbc.tool.library_commons.models.dto.BaseDTO;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Spy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
@@ -26,13 +26,13 @@ import static org.mockito.Mockito.*;
 @WebMvcTest(AddressController.class)
 class AddressControllerTest {
 
-	@MockBean
+	@MockitoBean
 	UDateTimeService uDateTimeService;
 
-	@MockBean
+	@MockitoBean
 	RespEntityErrorMapper respEntityErrorMapper;
 
-	@MockBean
+	@MockitoBean
 	AddressServiceImpl addressService;
 
 	@Autowired
@@ -44,7 +44,7 @@ class AddressControllerTest {
 	ObjectMapper objMapper;
 
 	@BeforeEach
-	public void setUp () {
+	void setUp () {
 		this.addressDTOs.add( DataMethods.getAddressDTO() );
 		this.objMapper = new ObjectMapper();
 	}
@@ -67,7 +67,7 @@ class AddressControllerTest {
 	@Test
 	void getAddressByIdTest () throws
 														 Exception {
-		AddressDTO dto = this.addressDTOs.get( 0 );
+		AddressDTO dto = this.addressDTOs.getFirst();
 		String strDTO = BaseDTO.toJsonStr( dto );
 		when( this.addressService.getOneById( anyLong() ) ).thenReturn( dto );
 
@@ -84,7 +84,7 @@ class AddressControllerTest {
 	@Test
 	void createAddressTest () throws
 														Exception {
-		AddressDTO dto = this.addressDTOs.get( 0 );
+		AddressDTO dto = this.addressDTOs.getFirst();
 		String strDTO = BaseDTO.toJsonStr( dto );
 		when( this.addressService.create( any( AddressDTO.class ) ) ).thenReturn( dto );
 

@@ -1,8 +1,8 @@
 package com.sdjr2.rest_contact_meanssb.models.entities;
 
-import com.sdjr2.sb.library_commons.models.entities.AuditableEntity;
-import com.sdjr2.sb.library_commons.models.entities.BaseEntity;
-import com.sdjr2.sb.library_commons.utils.UConstants;
+import com.ssdjr2.own.sbc.tool.library_commons.models.entities.AuditableEntity;
+import com.ssdjr2.own.sbc.tool.library_commons.models.entities.BaseEntity;
+import com.ssdjr2.own.sbc.tool.library_commons.utils.UConstants;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

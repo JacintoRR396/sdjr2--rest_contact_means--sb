@@ -2,10 +2,10 @@ package com.sdjr2.rest_contact_meanssb.models.enums.search;
 
 import com.sdjr2.rest_contact_meanssb.models.dto.AddressDTO;
 import com.sdjr2.rest_contact_meanssb.models.entities.AddressEntity;
-import com.sdjr2.sb.library_commons.exceptions.AppExceptionCodeEnum;
-import com.sdjr2.sb.library_commons.exceptions.CustomException;
-import com.sdjr2.sb.library_commons.models.dto.search.FilterDTO;
-import com.sdjr2.sb.library_commons.models.enums.OperatorFilterEnum;
+import com.ssdjr2.own.sbc.tool.library_commons.exceptions.AppExceptionCodeEnum;
+import com.ssdjr2.own.sbc.tool.library_commons.exceptions.CustomException;
+import com.ssdjr2.own.sbc.tool.library_commons.models.dto.search.FilterDTO;
+import com.ssdjr2.own.sbc.tool.library_commons.models.enums.OperatorFilterEnum;
 import lombok.Builder;
 import lombok.Data;
 import lombok.Getter;

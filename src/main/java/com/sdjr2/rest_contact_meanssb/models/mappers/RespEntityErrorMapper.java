@@ -1,7 +1,7 @@
 package com.sdjr2.rest_contact_meanssb.models.mappers;
 
-import com.sdjr2.sb.library_commons.exceptions.CustomException;
-import com.sdjr2.sb.library_commons.models.dto.errors.RespEntityErrorDTO;
+import com.ssdjr2.own.sbc.tool.library_commons.exceptions.CustomException;
+import com.ssdjr2.own.sbc.tool.library_commons.models.dto.errors.RespEntityErrorDTO;
 import org.mapstruct.AfterMapping;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

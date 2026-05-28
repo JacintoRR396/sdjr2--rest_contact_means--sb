@@ -2,10 +2,10 @@ package com.sdjr2.rest_contact_meanssb.config.exceptions;
 
 import com.sdjr2.rest_contact_meanssb.models.mappers.RespEntityErrorMapper;
 import com.sdjr2.rest_contact_meanssb.utils.UDateTimeService;
-import com.sdjr2.sb.library_commons.exceptions.AppExceptionCodeEnum;
-import com.sdjr2.sb.library_commons.exceptions.CustomException;
-import com.sdjr2.sb.library_commons.models.dto.errors.RespEntityErrorDTO;
-import com.sdjr2.sb.library_commons.utils.UConstants;
+import com.ssdjr2.own.sbc.tool.library_commons.exceptions.AppExceptionCodeEnum;
+import com.ssdjr2.own.sbc.tool.library_commons.exceptions.CustomException;
+import com.ssdjr2.own.sbc.tool.library_commons.models.dto.errors.RespEntityErrorDTO;
+import com.ssdjr2.own.sbc.tool.library_commons.utils.UConstants;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -133,8 +133,9 @@ public class HandlerExceptionController {
 		CustomException customEx = Objects.nonNull( appExCode )
 				? new CustomException( ex, appExCode, validationErrors ) : ( CustomException ) ex;
 		RespEntityErrorDTO error = this.respEntityErrorMapper.toDTO( customEx, this.uDateTimeService.getTimestamp() );
-		LOGGER.error( UConstants.MSG_BASE_ERROR + error.getErrorCode() + " :: " + error.getErrorMessage()
-				+ ". ExMsg: " + error.getExMessage() );
+		String msg = UConstants.MSG_BASE_ERROR + error.getErrorCode() + " :: " + error.getErrorMessage()
+				+ ". ExMsg: " + error.getExMessage();
+		LOGGER.error( msg );
 
 		return new ResponseEntity<>( error, customEx.getAppExCode().getHttpStatusCode() );
 	}

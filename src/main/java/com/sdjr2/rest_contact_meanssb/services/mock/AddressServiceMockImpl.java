@@ -5,7 +5,7 @@ import com.sdjr2.rest_contact_meanssb.models.entities.AddressEntity;
 import com.sdjr2.rest_contact_meanssb.models.mappers.AddressMapper;
 import com.sdjr2.rest_contact_meanssb.repositories.mock.AddressRepository;
 import com.sdjr2.rest_contact_meanssb.services.AddressService;
-import com.sdjr2.sb.library_commons.models.dto.search.SearchBodyDTO;
+import com.ssdjr2.own.sbc.tool.library_commons.models.dto.search.SearchBodyDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort;

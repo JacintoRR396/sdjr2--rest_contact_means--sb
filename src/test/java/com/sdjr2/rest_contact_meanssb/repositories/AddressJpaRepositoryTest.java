@@ -63,7 +63,7 @@ class AddressJpaRepositoryTest {
 		assertEquals( limit, pageEntitiesRes.getNumberOfElements() );
 		assertEquals( this.numElements / limit, pageEntitiesRes.getTotalPages() );
 		assertEquals( this.numElements, ( int ) pageEntitiesRes.getTotalElements() );
-		assertEquals( "Ancha", pageEntitiesRes.getContent().get( 0 ).getStreet() );
+		assertEquals( "Ancha", pageEntitiesRes.getContent().getFirst().getStreet() );
 	}
 
 	@Test

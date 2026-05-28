@@ -4,8 +4,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sdjr2.rest_contact_meanssb.config.auth.TokenJwtConfig;
 import com.sdjr2.rest_contact_meanssb.models.dto.auth.UserAuthReqDTO;
 import com.sdjr2.rest_contact_meanssb.models.dto.auth.UserAuthRespDTO;
-import com.sdjr2.sb.library_commons.exceptions.AppExceptionCodeEnum;
-import com.sdjr2.sb.library_commons.exceptions.CustomException;
+import com.ssdjr2.own.sbc.tool.library_commons.exceptions.AppExceptionCodeEnum;
+import com.ssdjr2.own.sbc.tool.library_commons.exceptions.CustomException;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import jakarta.servlet.FilterChain;
@@ -48,7 +48,7 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 	@Override
 	public Authentication attemptAuthentication ( HttpServletRequest request, HttpServletResponse response ) throws
 																																																					 AuthenticationException {
-		UserAuthReqDTO userAuthReqDTO = null;
+		UserAuthReqDTO userAuthReqDTO;
 		try {
 			userAuthReqDTO = new ObjectMapper().readValue( request.getInputStream(), UserAuthReqDTO.class );
 		} catch ( IOException ex ) {

@@ -2,8 +2,8 @@ package com.sdjr2.rest_contact_meanssb.models.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.sdjr2.rest_contact_meanssb.models.validations.ContactExistsById;
-import com.sdjr2.sb.library_commons.models.dto.BaseDTO;
-import com.sdjr2.sb.library_commons.utils.UConstants;
+import com.ssdjr2.own.sbc.tool.library_commons.models.dto.BaseDTO;
+import com.ssdjr2.own.sbc.tool.library_commons.utils.UConstants;
 import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;

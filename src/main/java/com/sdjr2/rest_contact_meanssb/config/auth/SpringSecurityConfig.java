@@ -2,7 +2,7 @@ package com.sdjr2.rest_contact_meanssb.config.auth;
 
 import com.sdjr2.rest_contact_meanssb.config.auth.filters.JwtAuthenticationFilter;
 import com.sdjr2.rest_contact_meanssb.config.auth.filters.JwtValidationFilter;
-import com.sdjr2.sb.library_commons.models.enums.RoleTypeEnum;
+import com.ssdjr2.own.sbc.tool.library_commons.models.enums.RoleTypeEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;

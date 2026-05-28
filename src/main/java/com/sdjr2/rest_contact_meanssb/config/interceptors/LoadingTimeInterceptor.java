@@ -1,7 +1,7 @@
 package com.sdjr2.rest_contact_meanssb.config.interceptors;
 
 import com.sdjr2.rest_contact_meanssb.controllers.ContactController;
-import com.sdjr2.sb.library_commons.config.BaseHandlerLogger;
+import com.ssdjr2.own.sbc.tool.library_commons.config.BaseHandlerLogger;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Component;

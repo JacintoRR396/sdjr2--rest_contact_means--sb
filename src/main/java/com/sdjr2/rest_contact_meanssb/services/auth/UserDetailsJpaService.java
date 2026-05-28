@@ -2,8 +2,8 @@ package com.sdjr2.rest_contact_meanssb.services.auth;
 
 import com.sdjr2.rest_contact_meanssb.models.entities.auth.UserEntity;
 import com.sdjr2.rest_contact_meanssb.repositories.auth.UserJpaRepository;
-import com.sdjr2.sb.library_commons.exceptions.AppExceptionCodeEnum;
-import com.sdjr2.sb.library_commons.exceptions.CustomException;
+import com.ssdjr2.own.sbc.tool.library_commons.exceptions.AppExceptionCodeEnum;
+import com.ssdjr2.own.sbc.tool.library_commons.exceptions.CustomException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

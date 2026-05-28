@@ -1,7 +1,7 @@
 package com.sdjr2.rest_contact_meanssb.models.dto.auth;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.sdjr2.sb.library_commons.models.dto.BaseDTO;
+import com.ssdjr2.own.sbc.tool.library_commons.models.dto.BaseDTO;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.*;

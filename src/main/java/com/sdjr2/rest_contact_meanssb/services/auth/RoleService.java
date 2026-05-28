@@ -4,7 +4,7 @@ import com.sdjr2.rest_contact_meanssb.models.dto.auth.RoleDTO;
 import com.sdjr2.rest_contact_meanssb.models.entities.auth.RoleEntity;
 import com.sdjr2.rest_contact_meanssb.models.mappers.auth.RoleMapper;
 import com.sdjr2.rest_contact_meanssb.repositories.auth.RoleJpaRepository;
-import com.sdjr2.sb.library_commons.services.BaseService;
+import com.ssdjr2.own.sbc.tool.library_commons.services.BaseService;
 
 /**
  * {@link RoleService} interface.

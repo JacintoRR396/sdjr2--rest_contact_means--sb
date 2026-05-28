@@ -1,7 +1,7 @@
 package com.sdjr2.rest_contact_meanssb.repositories.filters;
 
 import com.sdjr2.rest_contact_meanssb.models.entities.ContactEntity;
-import com.sdjr2.sb.library_commons.repositories.filters.BaseSpecifications;
+import com.ssdjr2.own.sbc.tool.library_commons.repositories.filters.BaseSpecifications;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 

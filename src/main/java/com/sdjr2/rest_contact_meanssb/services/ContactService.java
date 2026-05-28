@@ -4,7 +4,7 @@ import com.sdjr2.rest_contact_meanssb.models.dto.ContactDTO;
 import com.sdjr2.rest_contact_meanssb.models.entities.ContactEntity;
 import com.sdjr2.rest_contact_meanssb.models.mappers.ContactMapper;
 import com.sdjr2.rest_contact_meanssb.repositories.ContactJpaRepository;
-import com.sdjr2.sb.library_commons.services.BaseService;
+import com.ssdjr2.own.sbc.tool.library_commons.services.BaseService;
 
 /**
  * {@link ContactService} interface.
